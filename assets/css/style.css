@@ -1,5 +1,6 @@
-
-
+a:hover {
+    color: red;
+}
 
 body {
     background: #cccccc;
@@ -61,34 +62,18 @@ input[type=text] {
     box-sizing: border-box;
 }
 
+nav {
+    color: grey;
+    padding: 14px 16px;  
+    text-decoration: none;  
+}
+
 p {
     line-height: 1.6;
     padding-top: 20px;
     font-size: 20px;   
 }
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 auto; 
-    overflow: hidden;
-    background-color: white;
-    width: 960px;
     
-}
-
-li a {
-    color: grey;
-    padding: 14px 16px;
-    float: right;
-    text-decoration: none;
-    margin-bottom: 0;
-}
-    
-a:hover {
-    color: red;
-}
-
 .container {
     position: relative;
     top: 110px;
@@ -96,12 +81,18 @@ a:hover {
     overflow: auto;
     background: white;
     border: 1px solid #eeeeee;
-    width: 960px;
     padding: 20px;
-    margin: 0 auto;
+    margin: 20px auto;
+   
 }
 
-.head {
+.title {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#masthead {
     clear: both;
     overflow: auto;
     width: 100%;
@@ -110,13 +101,7 @@ a:hover {
     border-bottom: 2px solid grey;
     position: absolute;
     left: 0;
-    top:0;      
-}
-
-.title {
-    position: relative;
-    text-align: center;
-    color: white;
+    top:0;
 }
 
 #message {
@@ -143,42 +128,51 @@ a:hover {
     margin: 20px;
 }
 
-
-
-
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 640px) {
     * {
         width: 100%;
+        
     }
 
-    h1 {
-        color: red;
+    a {
+        width: 33.3%;
+        float: right;   
     }
+
+    #masthead {
+        position: static;
+    }
+
+    #name {
+        width: 100%;
+        text-align: center;
+        margin: 0;  
+    }
+   
+
 }
 
 @media screen and (max-width: 768px) {
     *{
         width: 100%;
     }
-
-
-    h1 {
-        color: yellow;
-    }
 }
 
-@media screen and (max-width: 640px) {
-    section.head {
-        position: static;
-        width: 375px;
+@media screen and (min-width: 980px) {
+    a {
+        float: right;
+        margin: 10px;
     }
-    
+
     .container {
-        width: 375px;
+        clear: both;
+        overflow: auto;
+        width: 960px;
     }
 
     h1 {
-        color: green;
-    }
+         color: red;
+     }
+ }
 
-}
+
